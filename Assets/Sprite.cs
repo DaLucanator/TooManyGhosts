@@ -5,11 +5,12 @@ using UnityEngine;
 public class Sprite : MonoBehaviour
 {
     [SerializeField] Transform follow;
-    [SerializeField] GridLayout gridLayout;
+    GridLayout gridLayout;
     Grid grid;
 
     private void Start()
     {
+        gridLayout = EnemySpawner.current.gridLayout;
         grid = gridLayout.gameObject.GetComponent<Grid>();
     }
 
